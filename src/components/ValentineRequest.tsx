@@ -23,7 +23,7 @@ const ValentineRequest: React.FC<Props> = ({ onYes }) => {
 
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-800 mb-6 tracking-tight">
-          Hi <span className="text-pink-500">Remo</span> 💕
+          Hi <span className="text-pink-500">Valentine Name</span> 💕
         </h1>
 
         {/* Subtext */}
