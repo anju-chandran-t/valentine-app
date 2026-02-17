@@ -2,44 +2,52 @@ import React from "react";
 
 const SuccessScreen: React.FC = () => {
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-br from-rose-100 via-pink-50 to-white px-6">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
 
-      {/* Text Section */}
-      <div className="text-center max-w-4xl mx-auto">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center scale-100"
+        style={{
+          backgroundImage: "url('/ValentineImage.jpg')"
+        }}
+      />
+
+      {/* Dark Elegant Overlay */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+
+      {/* Content */}
+      <div className="relative z-10 text-center px-6 max-w-4xl">
+
+        {/* Top Heart */}
+        <div className="text-red-500 text-7xl mb-6 drop-shadow-[0_0_30px_rgba(255,0,0,0.6)]">
+          ❤️
+        </div>
 
         {/* Main Heading */}
-        <h1 className="main-title">
-          Happy Valentines Day ❤️
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-serif font-bold text-white leading-tight mb-6">
+          Happy <br />
+          Valentines Day
         </h1>
 
-        {/* Name */}
-        <h2 className="name">
-          Dear Valentine Name
+        {/* Highlight Name */}
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-pink-300 mb-10 tracking-wide">
+          Dear Valentine
         </h2>
 
-        {/* Divider */}
-        <div className="w-40 h-[2px] mx-auto mb-8 bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+        {/* Elegant Divider */}
+        <div className="w-40 h-[2px] mx-auto mb-10 bg-gradient-to-r from-transparent via-pink-400 to-transparent" />
 
-        {/* Message */}
-        <p className="text-lg sm:text-xl md:text-2xl italic text-gray-700 mb-10">
+        {/* Subtitle */}
+        <p className="text-xl sm:text-2xl md:text-3xl text-white/90 italic font-serif leading-relaxed">
           I will be there with you forever.
         </p>
-      </div>
 
-      {/* Image Section (Full viewport width control) */}
-      <div className="flex justify-center w-screen mt-8">
-        <img
-          src="/ValentineImage.jpg"
-          alt="Image of us"
-          style={{
-            maxWidth: "80%",
-            height: "auto",
-            borderRadius: "12px",
-            boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
-          }}
-        />
-      </div>
+        {/* Bottom Icons */}
+        <div className="flex justify-center items-center gap-10 mt-16 text-4xl">
+          ✨ 🤍 ❤️ ✨
+        </div>
 
+      </div>
     </div>
   );
 };
